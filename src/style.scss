@@ -1,0 +1,24 @@
+.container{
+  padding: 1rem;
+}
+
+.inputField{
+  width: 20rem;
+}
+
+.tableWrapper{
+  padding: 1rem 0 0 0;
+}
+
+.noDataFound{
+  text-align: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+.hasError{
+	color: red;
+  font-size: 1rem;
+  padding: 0.5rem 0;
+}
