@@ -2,14 +2,17 @@
   "name": "react-ifsc-code",
   "version": "1.0.0",
   "description": "Bank details through ifsc code",
-  "main": "index.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
   },
   "keywords": [
     "react",
-    "react-ifsc-code"
+    "reactjs",
+    "react-component",
+    "react-ifsc-code",
+    "table"
   ],
   "repository": {
     "type": "git",
@@ -38,5 +41,6 @@
     "webpack": "^4.42.1",
     "webpack-cli": "^3.3.11",
     "webpack-dev-server": "^3.10.3"
-  }
+  },
+  "homepage": "https://github.com/khandelwalsarthak/react-ifsc-code#readme"
 }
