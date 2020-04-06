@@ -4,9 +4,9 @@ const HTMLWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.join(__dirname, '/dist'),
+    path: path.join(__dirname, 'build'),
     filename: 'index.js',
-    libraryTarget: "commonjs"
+    libraryTarget: "commonjs2"
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
@@ -37,8 +37,6 @@ module.exports = {
     })
   ],
   externals: {
-    // Use external version of React
-    'react': 'React',
-    'react-dom': 'ReactDOM'
+    react: "commonjs react"
   }
 }

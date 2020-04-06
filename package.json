@@ -1,8 +1,8 @@
 {
   "name": "react-ifsc-code",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Bank details through ifsc code",
-  "main": "dist/index.js",
+  "main": "build/index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development --open --hot",
     "build": "webpack --mode production"
