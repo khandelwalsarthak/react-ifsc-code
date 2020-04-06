@@ -1,10 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const TBody = props => {
-  const { className, children } = props;
-  return <div className={className}>{children}</div>;
-};
+class TBody extends React.Component {
+  render() {
+    const { className, children } = this.props;
+    return <div className={className}>{children}</div>;
+  }
+}
 
 TBody.propTypes = {
   className: PropTypes.string,

@@ -1,16 +1,18 @@
 import React from "react";
-import './style.scss';
+import './style.css';
 
-const Loader = () => {
-  return (
-    <div className="loader">
-      <div className="circle" />
-      <div className="circle" />
-      <div className="circle" />
-      <div className="circle" />
-      <div className="circle" />
-    </div>
-  );
+class Loader extends React.Component {
+  render() {
+    return (
+      <div className="loader">
+        <div className="circle" />
+        <div className="circle" />
+        <div className="circle" />
+        <div className="circle" />
+        <div className="circle" />
+      </div>
+    );
+  }
 }
 
 export default Loader;

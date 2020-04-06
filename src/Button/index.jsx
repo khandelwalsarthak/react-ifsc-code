@@ -1,39 +1,45 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import cx from 'classnames';
 import Spinner from '../Spinner/index';
-import './style.scss';
+import './style.css';
 
-const Button = (props) => {
-  const {
-    style,
-    className,
-    loading,
-    disabled,
-    children,
-    isSubmit
-  } = props;
+class Button extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleClick = this.handleClick.bind(this)
+  }
 
-  const btnClasses = `${className}`;
-
-  const handleClick = (e, fn) => {
+  handleClick(e, fn) {
+    const { loading } = this.props;
     if (loading) return;
     fn(e);
   };
 
-  return (
-    <button
-      type={isSubmit ? 'submit' : 'button'}
-      className={cx('button', btnClasses, {
-        'disabled': disabled,
-      })}
-      onClick={e => handleClick(e, props.onClick)}
-      style={style}
-    >
-      {loading ? <Spinner /> : children}
-    </button>
-  );
-};
+  render() {
+    const {
+      style,
+      className,
+      loading,
+      disabled,
+      children,
+      isSubmit
+    } = this.props;
+
+    return (
+      <button
+        type={isSubmit ? 'submit' : 'button'}
+        className={cx('button', className, {
+          'disabled': disabled,
+        })}
+        onClick={e => this.handleClick(e, this.props.onClick)}
+        style={style}
+      >
+        {loading ? <Spinner /> : children}
+      </button>
+    );
+  }
+}
 
 Button.defaultProps = {
   disabled: false,

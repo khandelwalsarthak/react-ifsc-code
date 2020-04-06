@@ -1,12 +1,14 @@
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import './style.scss';
+import './style.css';
 
-const TCell = props => {
-  const { className, children } = props;
-  return <div className={cx('tableCell', className)}>{children}</div>;
-};
+class TCell extends React.Component {
+  render() {
+    const { className, children } = this.props;
+    return <div className={cx('tableCell', className)}>{children}</div>;
+  }
+}
 
 TCell.propTypes = {
   className: PropTypes.string,

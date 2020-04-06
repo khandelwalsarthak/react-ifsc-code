@@ -1,30 +1,32 @@
 import React from "react";
 import cx from "classnames";
 import PropTypes from "prop-types";
-import "./style.scss";
+import "./style.css";
 
-const TextField = props => {
-  const { className, style, type, value, readOnly, label, id, name, defaultValue } = props;
-  return (
-    <div className="textFieldWrapper">
-      <input
-        className={cx("textField", className)}
-        style={style}
-        type={type || 'text'}
-        value={value || defaultValue}
-        readOnly={readOnly}
-        {...props.textFieldProps}
-        name={name}
-        required=""
-        id={id}
-      />
+class TextField extends React.Component {
+  render() {
+    const { className, style, type, value, readOnly, label, id, name, defaultValue } = this.props;
+    return (
+      <div className="textFieldWrapper">
+        <input
+          className={cx("textField", className)}
+          style={style}
+          type={type || 'text'}
+          value={value || defaultValue}
+          readOnly={readOnly}
+          {...this.props.textFieldProps}
+          name={name}
+          required=""
+          id={id}
+        />
 
-      <label className="floatLabel" htmlFor={id}>
-        {label}
-      </label>
-    </div>
-  );
-};
+        <label className="floatLabel" htmlFor={id}>
+          {label}
+        </label>
+      </div>
+    );
+  }
+}
 
 TextField.defaultProps = {
   label: "",

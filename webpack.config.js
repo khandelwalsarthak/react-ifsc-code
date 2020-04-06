@@ -5,7 +5,8 @@ module.exports = {
   entry: './src/index.js',
   output: {
     path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    libraryTarget: "commonjs"
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json']
@@ -34,5 +35,10 @@ module.exports = {
     new HTMLWebpackPlugin({
       template: './src/index.html'
     })
-  ]
+  ],
+  externals: {
+    // Use external version of React
+    'react': 'React',
+    'react-dom': 'ReactDOM'
+  }
 }

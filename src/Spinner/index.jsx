@@ -1,12 +1,12 @@
 import React from "react";
-import "./style.scss";
+import "./style.css";
 
-const Spinner = props => {
-  return (
-    <>
+class Spinner extends React.Component {
+  render() {
+    return (
       <div className="spinnerBorder" />
-    </>
-  );
-};
+    )
+  }
+}
 
 export default Spinner;

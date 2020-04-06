@@ -1,12 +1,14 @@
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import './style.scss';
+import './style.css';
 
-const THead = props => {
-  const { className, children } = props;
-  return <div className={cx('tableHead', className)}>{children}</div>;
-};
+class THead extends React.Component {
+  render() {
+    const { className, children } = this.props;
+    return <div className={cx('tableHead', className)}>{children}</div>;
+  }
+}
 
 THead.propTypes = {
   className: PropTypes.string,

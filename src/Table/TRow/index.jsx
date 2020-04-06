@@ -1,12 +1,14 @@
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import './style.scss';
+import './style.css';
 
-const TRow = props => {
-  const { className, children } = props;
-  return <div className={cx('tableRow', className)}>{children}</div>;
-};
+class TRow extends React.Component {
+  render() {
+    const { className, children } = this.props;
+    return <div className={cx('tableRow', className)}>{children}</div>;
+  }
+}
 
 TRow.propTypes = {
   className: PropTypes.string,

@@ -6,20 +6,22 @@ import {
   TCell,
   TBody
 } from '../Table';
-import './style.scss';
+import './style.css';
 
-const TableLoader = props => {
-  const { colspan } = props;
-  return (
-    <TBody>
-      <TRow>
-        <TCell colSpan={colspan} className='tableLoader'>
-          <Loader />
-        </TCell>
-      </TRow>
-    </TBody>
-  );
-};
+class TableLoader extends React.Component {
+  render() {
+    const { colspan } = this.props;
+    return (
+      <TBody>
+        <TRow>
+          <TCell colSpan={colspan} className='tableLoader'>
+            <Loader />
+          </TCell>
+        </TRow>
+      </TBody>
+    );
+  }
+}
 
 TableLoader.propTypes = {
   colspan: PropTypes.number

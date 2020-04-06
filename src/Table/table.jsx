@@ -1,18 +1,19 @@
 import React from 'react';
 import cx from 'classnames';
 import PropTypes from 'prop-types';
-import './style.scss';
+import './style.css';
 
-const Table = props => {
-  const { className, children } = props;
-
-  return (
-    <div className='tableWrapper'>
-      <div className={cx('table', className)}>
-        {children}
+class Table extends React.Component {
+  render() {
+    const { className, children } = this.props;
+    return (
+      <div className='tableWrapper'>
+        <div className={cx('table', className)}>
+          {children}
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
 }
 
 Table.propTypes = {
